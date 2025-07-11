@@ -1,0 +1,16 @@
+<% content_for(:title) { "exalog - Carl's blog/toybox" } %>
+<nav class="primary-nav" data-controller="nav">
+  <div class="nav-heading">
+    <div class="nav-title">
+      exalog
+    </div>
+    <div class="nav-subheading">
+      toy box and occasional blog of Carl Zulauf
+    </div>
+  </div>
+  <div class="nav-links">
+    <a class="theme-toggle" title="Toggle dark/light theme" data-action="click->nav#toggleTheme">
+      <%= inline_svg "theme-toggle" %>
+    </a>
+  </div>
+</nav>

@@ -1,0 +1,60 @@
+/* Layout CSS for pages using the default layout (application.html.erb) */
+
+body {
+  margin: 0;
+}
+
+/* DEFAULT DARK THEME */
+body.dark-theme {
+  background: #000;
+  color: white;
+  .primary-nav {
+    background: linear-gradient(178deg, rgb(34 34 34 / 1), rgb(34 34 34 / 1) 40%, rgb(34 34 34 / 0) 100%);
+  }
+  .nav-subheading {
+    color: #555;
+  }
+  .theme-toggle svg {
+    fill: rgba(255,255,255,0.5);
+  }
+}
+
+/* LIGHT THEME */
+body.light-theme {
+  background-color: white;
+  color: black;
+  .primary-nav {
+    background: linear-gradient(178deg, rgba(220 220 220 / 1), rgb(220 220 220 / 1) 30%, rgb(220 220 220 / 0) 90%, rgb(220 220 220 / 0) 100%);
+  }
+  .nav-subheading {
+    color: #666;
+  }
+  .theme-toggle svg {
+    fill: rgba(0,0,0,0.5);
+  }
+}
+
+.primary-nav {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 20px 20px 20px;
+  align-items: center;
+  justify-content: space-between;
+
+  .nav-heading {
+    /* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+
+    .nav-title {
+      font-size: 2em;
+    }
+    .nav-subheading {
+      font-size: 0.85em;
+    }
+  }
+
+  .theme-toggle {
+    cursor: pointer;
+  }
+}
