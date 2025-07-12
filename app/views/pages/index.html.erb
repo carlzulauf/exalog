@@ -1,16 +1,18 @@
 <% content_for(:title) { "exalog - Carl's blog/toybox" } %>
-<nav class="primary-nav" data-controller="nav">
-  <div class="nav-heading">
-    <div class="nav-title">
-      exalog
-    </div>
-    <div class="nav-subheading">
-      toy box and occasional blog of Carl Zulauf
-    </div>
-  </div>
-  <div class="nav-links">
-    <a class="theme-toggle" title="Toggle dark/light theme" data-action="click->nav#toggleTheme">
-      <%= inline_svg "theme-toggle" %>
-    </a>
-  </div>
-</nav>
+
+<%= render "layouts/nav" %>
+
+<ul class="page-list">
+  <li>
+    <%= link_to regex_path("cheats") do %>
+      <em>Ruby Regex Cheat Sheet</em>
+      <small>Regular expression reference for any Perl Compatible Regular Expressions (PCRE) system, but particularly ruby.</small>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to page_path("pixels") do %>
+      <em>Dead Pixel Finder</em>
+      <small>Simple tool that toggles between white/black, and primary colors (on click) to help you find any stuck or dead pixels on an LCD/OLED.</small>
+    <% end %>
+  </li>
+<ul>
