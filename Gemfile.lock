@@ -182,6 +182,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.8-x86_64-linux-musl)
       racc (~> 1.4)
+    opt_struct (1.6.0)
     ostruct (0.6.2)
     parallel (1.27.0)
     parser (3.3.8.0)
@@ -366,6 +367,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   kamal
+  opt_struct
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.2)

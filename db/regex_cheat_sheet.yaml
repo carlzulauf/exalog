@@ -1,0 +1,59 @@
+---
+- example: "[abc]"
+  description: 'A single character of: <code>a</code>, <code>b</code>, or <code>c</code>'
+- example: "[^abc]"
+  description: 'Any single character except: <code>a</code>, <code>b</code>, or <code>c</code>'
+- example: "[a-z]"
+  description: Any single character in the range a-z
+- example: "[a-zA-Z]"
+  description: Any single character in the range a-z or A-Z
+- example: "^"
+  description: Start of line
+- example: "$"
+  description: End of line
+- example: "\\A"
+  description: Start of string
+- example: "\\z"
+  description: End of string
+- example: "."
+  description: Any single character
+- example: "\\s"
+  description: Any whitespace character
+- example: "\\S"
+  description: Any non-whitespace character
+- example: "\\d"
+  description: Any digit
+- example: "\\D"
+  description: Any non-digit
+- example: "\\w"
+  description: Any word character (letter, number, underscore)
+- example: "\\W"
+  description: Any non-word character
+- example: "\\b"
+  description: Any word boundary
+- example: "(...)"
+  description: Capture everything enclosed
+- example: "(?<n>...)"
+  description: Named-capture of everything enclosed, named <code>n</code>
+- example: "(?:...)"
+  description: Non-capture group
+- example: "(a\\|b)"
+  description: "<code>a</code> or <code>b</code>"
+- example: a?
+  description: Zero or one of <code>a</code>
+- example: a*
+  description: Zero or more of <code>a</code>
+- example: a*?
+  description: Zero or more of <code>a</code>, lazily (shortest possible)
+- example: a+
+  description: One or more of <code>a</code>
+- example: a+?
+  description: One or more of <code>a</code>, lazily
+- example: a{3}
+  description: Exactly 3 of <code>a</code>
+- example: a{3,}
+  description: 3 or more of <code>a</code>
+- example: a{3,}?
+  description: 3 or more of <code>a</code>, lazily
+- example: a{3,6}
+  description: Between 3 and 6 of <code>a</code>

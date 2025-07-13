@@ -1,7 +1,6 @@
 /* Layout CSS for pages using the default layout (application.html.erb) */
 
 body {
-  margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: var(--page-bg);
   color: var(--page-fg);
@@ -37,10 +36,12 @@ body {
     }
   }
 
-  .theme-toggle {
-    cursor: pointer;
-    svg {
-      fill: var(--theme-toggle-fg);
-    }
+
+}
+
+.theme-toggle {
+  cursor: pointer;
+  svg {
+    fill: var(--theme-toggle-fg);
   }
 }

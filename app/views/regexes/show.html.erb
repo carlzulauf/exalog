@@ -1,0 +1,24 @@
+<% content_for(:title) { "Ruby Regular Expressions Cheat Sheet" } %>
+<div class="cheat-sheet">
+  <div class="header" data-controller="nav">
+    <div class="home-links">
+      <%= link_to root_path do %>
+        <%= inline_svg "home" %>
+      <% end %>
+    </div>
+    <div class="heading">Regular Expression Syntax</div>
+    <div class="nav-links">
+      <a class="theme-toggle" title="Toggle dark/light theme" data-action="click->nav#toggleTheme">
+        <%= inline_svg "theme-toggle" %>
+      </a>
+    </div>
+  </div>
+  <div class="cheats">
+    <% @entries.each do |entry| %>
+      <div class="entry">
+        <div class="example"><code><%= entry.example %></code></div>
+        <div class="description"><%= entry.description.html_safe %></div>
+      </div>
+    <% end %>
+  </div>
+</div>
