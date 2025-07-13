@@ -1,0 +1,11 @@
+<% content_for(:title) { "Dead Pixel Finder" } %>
+<% content_for(:head) do %>
+  <style>
+    body.pixels {
+      height: 100vh;
+      background: #000;
+    }
+  </style>
+<% end %>
+<% add_body_controller(:pixels) %>
+<% add_body_class(:pixels) %>

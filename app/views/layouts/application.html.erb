@@ -22,7 +22,5 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="<%= current_theme %>">
-    <%= yield %>
-  </body>
+  <%= body_tag { yield } %>
 </html>
