@@ -38,7 +38,7 @@ body.dark-theme {
     padding: 10px 0;
     border-bottom: 2px solid;
     border-color: var(--page-fg);
-    margin-bottom: 5px;
+    margin-bottom: 0.5em;
     justify-content: space-between;
     align-items: center;
 
@@ -58,7 +58,7 @@ body.dark-theme {
   }
   .cheats {
     column-width: 26em;
-    padding: 0 10px;
+    padding: 0 0.75em;
   }
   .entry {
     display: flex;

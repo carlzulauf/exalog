@@ -2,10 +2,11 @@
 
 ul.page-list {
   list-style: none;
-  width: 32em;
+  max-width: 32em;
   display: flex;
   flex-direction: column;
   margin: 0 auto; /* center the list */
+  padding: 0 1em;
 
   a {
     flex-direction: column;
