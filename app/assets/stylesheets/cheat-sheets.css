@@ -20,6 +20,7 @@ body.dark-theme {
   display: flex;
   flex-direction: column;
   color: var(--cheat-fg);
+  margin-bottom: 0.5em;
 
   code {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
