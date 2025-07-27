@@ -1,10 +1,11 @@
 import { Controller } from "@hotwired/stimulus"
 import hljs from 'highlight.js';
 
+console.log(hljs)
+
 export default class extends Controller {
   connect() {
-    console.log(hljs);
-    this.element.querySelectorAll("code pre").forEach((el) => {
+    this.element.querySelectorAll("code, pre").forEach((el) => {
       hljs.highlightElement(el);
     });
   }

@@ -9,22 +9,57 @@
 
   <p>Here's some ruby.</p>
 
-  <pre language="ruby">require 'kramdown'
+  <pre class="language-ruby">require_relative "boot"
 
-Kramdown::Document.new(text).to_html</pre>
+require "rails/all"
+
+# Require the gems listed in Gemfile, including any gems
+# you've limited to :test, :development, or :production.
+Bundler.require(*Rails.groups)
+
+module Exalog
+  class Application < Rails::Application
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 8.0
+
+    # Please, add to the `ignore` list any other `lib` subdirectories that do
+    # not contain `.rb` files, or that should not be reloaded or eager loaded.
+    # Common ones are `templates`, `generators`, or `middleware`, for example.
+    config.autoload_lib(ignore: %w[assets tasks])
+
+    # Configuration for the application, engines, and railties goes here.
+    #
+    # These settings can be overridden in specific environments using the files
+    # in config/environments, which are processed later.
+    #
+    # config.time_zone = "Central Time (US & Canada)"
+    # config.eager_load_paths << Rails.root.join("extras")
+  end
+end
+</pre>
 
   <p>Here's some javascript</p>
 
-  <pre language="javascript">document.addEventListener('DOMContentLoaded', (event) => {
-  document.querySelectorAll('pre code').forEach((el) => {
-    hljs.highlightElement(el);
-  });
-});</pre>
+  <pre class="language-javascript">import { Controller } from "@hotwired/stimulus"
+import hljs from 'highlight.js';
+
+export default class extends Controller {
+  connect() {
+    this.element.querySelectorAll("code, pre").forEach((el) => {
+      const lang = el.getAttribute("language")
+      console.log(lang, el)
+      if (lang) {
+        hljs.highlightElement(el, { language: lang });
+      }
+    });
+  }
+}
+</pre>
 
   <p>And, for now, we'll just add in a little SQL</p>
 
-  <pre language="sql">SELECT * FROM users
+  <pre class="language-sql">SELECT * FROM users
   WHERE id IN (SELECT user_id FROM admin_users);</pre>
 
-  <p>And here is a sentence with an incode code example: <code language="ruby">puts 'Hello world!'</code>.</p>
+  <p>And here is a sentence with an inline code example: <code class="language-ruby">puts 'Hello world!'</code>.</p>
 </article>

@@ -38,6 +38,7 @@ ul.page-list {
 
     small {
       color: var(--page-link-desc-fg);
+      font-size: 0.9em;
     }
   }
 }
