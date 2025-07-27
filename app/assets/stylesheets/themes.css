@@ -1,38 +1,40 @@
 /* themes are implemented using CSS custom properties */
 
-body.dark-theme {
-  --page-bg: #000;
-  --page-fg: #c8c8c8;
-  --primary-nav-bg: linear-gradient(178deg, rgb(34 34 34 / 1), rgb(34 34 34 / 1) 40%, rgb(34 34 34 / 0) 100%);
-  --primary-nav-title-fg: var(--page-fg);
-  --primary-nav-title-fg-hover: #fff;
-  --primary-nav-subheading-fg: #555555;
-  --theme-toggle-fg: #555555;
-  --page-link-bg: #1e1e1e;
-  --page-link-bg-hover: #2d322d;
-  --page-link-border: #787878;
-  --page-link-border-hover: #8cc88c;
-  --page-link-title-fg: #c8c8c8;
-  --page-link-title-fg-hover: #dedede;
-  --page-link-desc-fg: #787878;
-  --page-link-desc-fg-hover: #969696;
-}
+@layer themes {
+  body.dark-theme {
+    --page-bg: #000;
+    --page-fg: #c8c8c8;
+    --primary-nav-bg: linear-gradient(178deg, rgb(34 34 34 / 1), rgb(34 34 34 / 1) 40%, rgb(34 34 34 / 0) 100%);
+    --primary-nav-title-fg: var(--page-fg);
+    --primary-nav-title-fg-hover: #fff;
+    --primary-nav-subheading-fg: #555555;
+    --theme-toggle-fg: #555555;
+    --page-link-bg: #1e1e1e;
+    --page-link-bg-hover: #2d322d;
+    --page-link-border: #787878;
+    --page-link-border-hover: #8cc88c;
+    --page-link-title-fg: #c8c8c8;
+    --page-link-title-fg-hover: #dedede;
+    --page-link-desc-fg: #787878;
+    --page-link-desc-fg-hover: #969696;
+  }
 
-/* LIGHT THEME */
-body.light-theme {
-  --page-bg: #fff;
-  --page-fg: #333333;
-  --primary-nav-bg: linear-gradient(178deg, rgba(220 220 220 / 1), rgb(220 220 220 / 1) 30%, rgb(220 220 220 / 0) 90%, rgb(220 220 220 / 0) 100%);
-  --primary-nav-title-fg: var(--page-fg);
-  --primary-nav-title-fg-hover: #001400;
-  --primary-nav-subheading-fg: #888888;
-  --theme-toggle-fg: #888888;
-  --page-link-bg: #f4f4f4;
-  --page-link-bg-hover: #f0faf0;
-  --page-link-border: #dfdfdf;
-  --page-link-border-hover: #d0dfd0;
-  --page-link-title-fg: #333333;
-  --page-link-title-fg-hover: #001400;
-  --page-link-desc-fg: #8c8c8c;
-  --page-link-desc-fg-hover: #808c80;
+  /* LIGHT THEME */
+  body.light-theme {
+    --page-bg: #fff;
+    --page-fg: #333333;
+    --primary-nav-bg: linear-gradient(178deg, rgba(220 220 220 / 1), rgb(220 220 220 / 1) 30%, rgb(220 220 220 / 0) 90%, rgb(220 220 220 / 0) 100%);
+    --primary-nav-title-fg: var(--page-fg);
+    --primary-nav-title-fg-hover: #001400;
+    --primary-nav-subheading-fg: #888888;
+    --theme-toggle-fg: #888888;
+    --page-link-bg: #f4f4f4;
+    --page-link-bg-hover: #f0faf0;
+    --page-link-border: #dfdfdf;
+    --page-link-border-hover: #d0dfd0;
+    --page-link-title-fg: #333333;
+    --page-link-title-fg-hover: #001400;
+    --page-link-desc-fg: #8c8c8c;
+    --page-link-desc-fg-hover: #808c80;
+  }
 }

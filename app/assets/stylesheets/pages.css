@@ -1,44 +1,46 @@
 /* styles shared by pages index and show pages */
 
-ul.page-list {
-  list-style: none;
-  max-width: 32em;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto; /* center the list */
-  padding: 0 1em;
-
-  a {
-    flex-direction: column;
+@layer pages {
+  ul.page-list {
+    list-style: none;
+    max-width: 32em;
     display: flex;
-    text-decoration: none;
-    border: 2px solid;
-    border-color: var(--page-link-border);
-    border-radius: 0.75em;
-    background: var(--page-link-bg);
-    padding: 1em;
-    margin: 0 0 1.25em 0;
+    flex-direction: column;
+    margin: 0 auto; /* center the list */
+    padding: 0 1em;
 
-    &:hover {
-      background: var(--page-link-bg-hover);
-      border-color: var(--page-link-border-hover);
+    a {
+      flex-direction: column;
+      display: flex;
+      text-decoration: none;
+      border: 2px solid;
+      border-color: var(--page-link-border);
+      border-radius: 0.75em;
+      background: var(--page-link-bg);
+      padding: 1em;
+      margin: 0 0 1.25em 0;
+
+      &:hover {
+        background: var(--page-link-bg-hover);
+        border-color: var(--page-link-border-hover);
+        em {
+          color: var(--page-link-title-fg-hover);
+        }
+        small {
+          color: var(--page-link-desc-fg-hover);
+        }
+      }
+
       em {
-        color: var(--page-link-title-fg-hover);
+        color: var(--page-link-title-fg);
+        font-style: normal;
+        font-weight: 600;
       }
+
       small {
-        color: var(--page-link-desc-fg-hover);
+        color: var(--page-link-desc-fg);
+        font-size: 0.9em;
       }
-    }
-
-    em {
-      color: var(--page-link-title-fg);
-      font-style: normal;
-      font-weight: 600;
-    }
-
-    small {
-      color: var(--page-link-desc-fg);
-      font-size: 0.9em;
     }
   }
 }

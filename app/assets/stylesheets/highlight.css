@@ -1,104 +1,108 @@
-body.light-theme {
-  --examples-code-bg: #f3f3f3;
-  --examples-code-fg: #383a42;
-  --examples-code-attribute: #e45649;
-  --examples-code-constant: #cb7701;
-  --examples-code-keyword: #a626a4;
-  --examples-code-comment: #a0a1a7;
-  --examples-code-string: #50a14f;
-  --examples-code-symbol: #0184bc;
-  --examples-code-number: #b76b01;
-  --examples-code-variable: #e45649;
-}
+/* colors based on "One Dark"/"One Light" syntax themes from atom/pulsar */
 
-body.dark-theme {
-  --examples-code-bg: #282c34;
-  --examples-code-fg: #ffffff;
-  --examples-code-attribute: #e06c75;
-  --examples-code-constant: #e5c07b;
-  --examples-code-keyword: #c678dd;
-  --examples-code-string: #98c379;
-  --examples-code-symbol: #56b6c2;
-  --examples-code-number: #d19a66;
-  --examples-code-variable: #e06c75;
-  --examples-code-comment: #5c6370;
-}
-
-article.examples {
-  p {
-    margin: 0.75em 0;
+@layer highlight {
+  body.light-theme {
+    --examples-code-bg: #f3f3f3;
+    --examples-code-fg: #383a42;
+    --examples-code-attribute: #e45649;
+    --examples-code-constant: #cb7701;
+    --examples-code-keyword: #a626a4;
+    --examples-code-comment: #a0a1a7;
+    --examples-code-string: #50a14f;
+    --examples-code-symbol: #0184bc;
+    --examples-code-number: #b76b01;
+    --examples-code-variable: #e45649;
   }
 
-  code {
-    background: var(--examples-code-bg);
+  body.dark-theme {
+    --examples-code-bg: #282c34;
+    --examples-code-fg: #ffffff;
+    --examples-code-attribute: #e06c75;
+    --examples-code-constant: #e5c07b;
+    --examples-code-keyword: #c678dd;
+    --examples-code-string: #98c379;
+    --examples-code-symbol: #56b6c2;
+    --examples-code-number: #d19a66;
+    --examples-code-variable: #e06c75;
+    --examples-code-comment: #5c6370;
+  }
+
+  article.examples {
+    p {
+      margin: 0.75em 0;
+    }
+
+    code {
+      background: var(--examples-code-bg);
+      color: var(--examples-code-fg);
+      padding: 3px 4px 3px 5px;
+      border-radius: 4px;
+    }
+
+    pre {
+      background: var(--examples-code-bg);
+      padding: 8px 15px 8px 15px;
+      border-radius: 5px;
+    }
+  }
+
+  .hljs {
     color: var(--examples-code-fg);
-    padding: 3px 4px 3px 5px;
-    border-radius: 4px;
   }
 
-  pre {
-    background: var(--examples-code-bg);
-    padding: 8px 15px 8px 15px;
-    border-radius: 5px;
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-literal,
+  .hljs-section,
+  .hljs-link {
+    color: var(--examples-code-keyword);
   }
-}
-
-.hljs {
-  color: var(--examples-code-fg);
-}
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-section,
-.hljs-link {
-  color: var(--examples-code-keyword);
-}
 
 
-.hljs-subst {
-  /* default */
-}
+  .hljs-subst {
+    /* default */
+  }
 
-.hljs-number {
-  color: var(--examples-code-number);
-}
+  .hljs-number {
+    color: var(--examples-code-number);
+  }
 
-.hljs-title,
-.hljs-name {
-  color: var(--examples-code-constant);
-}
+  .hljs-title,
+  .hljs-name {
+    color: var(--examples-code-constant);
+  }
 
-.hljs-string,
-.hljs-bullet,
-.hljs-addition,
-.hljs-template-tag,
-.hljs-template-variable {
-  color: var(--examples-code-string);
-}
+  .hljs-string,
+  .hljs-bullet,
+  .hljs-addition,
+  .hljs-template-tag,
+  .hljs-template-variable {
+    color: var(--examples-code-string);
+  }
 
-.hljs-attribute,
-.hljs-built_in,
-.hljs-type {
-  color: var(--examples-code-attribute);
-}
+  .hljs-attribute,
+  .hljs-built_in,
+  .hljs-type {
+    color: var(--examples-code-attribute);
+  }
 
-.hljs-variable {
-  color: var(--examples-code-variable);
-}
+  .hljs-variable {
+    color: var(--examples-code-variable);
+  }
 
-.hljs-symbol,
-.hljs-params {
-  color: var(--examples-code-symbol);
-}
+  .hljs-symbol,
+  .hljs-params {
+    color: var(--examples-code-symbol);
+  }
 
-.hljs-comment,
-.hljs-quote,
-.hljs-deletion,
-.hljs-meta {
-  color: var(--examples-code-comment);
-}
+  .hljs-comment,
+  .hljs-quote,
+  .hljs-deletion,
+  .hljs-meta {
+    color: var(--examples-code-comment);
+  }
 
-.hljs-emphasis {
-  font-style: italic;
+  .hljs-emphasis {
+    font-style: italic;
+  }
 }

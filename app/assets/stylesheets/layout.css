@@ -2,71 +2,73 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 
-body {
-  font-family: "Ubuntu Sans", sans-serif;
-  background: var(--page-bg);
-  color: var(--page-fg);
-  font-size: 1.2em;
-}
-
-
-article {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-
-  h1 {
-    font-size: 2em;
+@layer layout {
+  body {
+    font-family: "Ubuntu Sans", sans-serif;
+    background: var(--page-bg);
+    color: var(--page-fg);
+    font-size: 1.2em;
   }
-}
 
-code, pre {
-  font-family: "Ubuntu Sans Mono", monospace;
-  font-size: 0.9em;
-}
 
-/* @media (min-width: 900px) {
   article {
+    width: 90%;
     max-width: 900px;
     margin: 0 auto;
-    padding: 0;
+
+    h1 {
+      font-size: 2em;
+    }
   }
-} */
 
-.primary-nav {
-  background: var(--primary-nav-bg);
-  display: flex;
-  flex-direction: row;
-  padding: 5px 20px 20px 20px;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 0 2em 0;
+  code, pre {
+    font-family: "Ubuntu Sans Mono", monospace;
+    font-size: 0.9em;
+  }
 
-  .nav-heading {
-    /* flex-grow: 1; */
+  /* @media (min-width: 900px) {
+    article {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  } */
+
+  .primary-nav {
+    background: var(--primary-nav-bg);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    padding: 5px 20px 20px 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 2em 0;
 
-    .nav-title {
-      font-size: 2.5em;
-      a {
-        text-decoration: none;
-        color: var(--primary-nav-title-fg);
-        &:hover {
-          color: var(--primary-nav-title-fg-hover);
+    .nav-heading {
+      /* flex-grow: 1; */
+      display: flex;
+      flex-direction: column;
+
+      .nav-title {
+        font-size: 2.5em;
+        a {
+          text-decoration: none;
+          color: var(--primary-nav-title-fg);
+          &:hover {
+            color: var(--primary-nav-title-fg-hover);
+          }
         }
       }
-    }
-    .nav-subheading {
-      color: var(--primary-nav-subheading-fg);
-      font-size: 0.9em;
+      .nav-subheading {
+        color: var(--primary-nav-subheading-fg);
+        font-size: 0.9em;
+      }
     }
   }
-}
 
-.theme-toggle {
-  cursor: pointer;
-  svg {
-    fill: var(--theme-toggle-fg);
+  .theme-toggle {
+    cursor: pointer;
+    svg {
+      fill: var(--theme-toggle-fg);
+    }
   }
 }
