@@ -1,0 +1,25 @@
+body.light-theme {
+  --examples-code-bg: #dddddd;
+}
+
+body.dark-theme {
+  --examples-code-bg: #333333;
+}
+
+article.examples {
+  p {
+    margin: 0.75em 0;
+  }
+
+  code {
+    background: var(--examples-code-bg);
+    padding: 1px 4px 3px 5px;
+    border-radius: 4px;
+  }
+
+  pre {
+    background: var(--examples-code-bg);
+    padding: 2px 7px 4px 7px;
+    border-radius: 5px;
+  }
+}

@@ -6,6 +6,25 @@ body {
   color: var(--page-fg);
 }
 
+
+article {
+  width: 90%;
+  max-width: 760px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 2em;
+  }
+}
+
+/* @media (min-width: 900px) {
+  article {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+  }
+} */
+
 .primary-nav {
   background: var(--primary-nav-bg);
   display: flex;
@@ -35,8 +54,6 @@ body {
       font-size: 0.85em;
     }
   }
-
-
 }
 
 .theme-toggle {

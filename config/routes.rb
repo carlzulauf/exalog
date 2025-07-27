@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
-  resources :pages, only: %i[show]
+  resources :pages, only: %i[show] do
+    member do
+      get :highlight
+    end
+  end
   resources :regexes, only: %i[show]
   # Defines the root path route ("/")
   # root "posts#index"

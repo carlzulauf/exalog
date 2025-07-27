@@ -1,0 +1,30 @@
+<!-- test integrating of highlight.js with a few different source examples -->
+
+<% content_for(:title) { "syntax highlighting" } %>
+
+<%= render "layouts/nav" %>
+
+<article class="examples" data-controller="highlight-sources">
+  <h1>Testing Syntax Highlighting</h1>
+
+  <p>Here's some ruby.</p>
+
+  <pre language="ruby">require 'kramdown'
+
+Kramdown::Document.new(text).to_html</pre>
+
+  <p>Here's some javascript</p>
+
+  <pre language="javascript">document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((el) => {
+    hljs.highlightElement(el);
+  });
+});</pre>
+
+  <p>And, for now, we'll just add in a little SQL</p>
+
+  <pre language="sql">SELECT * FROM users
+  WHERE id IN (SELECT user_id FROM admin_users);</pre>
+
+  <p>And here is a sentence with an incode code example: <code language="ruby">puts 'Hello world!'</code>.</p>
+</article>
