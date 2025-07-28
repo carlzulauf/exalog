@@ -17,6 +17,7 @@
     --page-link-title-fg-hover: #dedede;
     --page-link-desc-fg: #787878;
     --page-link-desc-fg-hover: #969696;
+    --gfm-editor-bg: linear-gradient(90deg, rgb(0 0 0 / 1), rgb(0 0 0 / 1) 90%, rgb(34 34 34 / 1) 100%);
   }
 
   /* LIGHT THEME */
@@ -36,5 +37,6 @@
     --page-link-title-fg-hover: #001400;
     --page-link-desc-fg: #8c8c8c;
     --page-link-desc-fg-hover: #808c80;
+    --gfm-editor-bg: linear-gradient(90deg, rgb(255 255 255 / 1), rgb(255 255 255 / 1) 90%, rgb(215 215 215 / 1) 100%);
   }
 }
