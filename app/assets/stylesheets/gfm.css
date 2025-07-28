@@ -1,23 +1,40 @@
 @layer gfm {
   .divided-panes {
-    display: grid;
-    grid-template-columns: 45% 55%;
-
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100vh;
   }
+
+  @media (min-width: 1280px) {
+    .divided-panes {
+      display: grid;
+      grid-template-columns: 45% 55%;
+
+      width: 100%;
+      height: 100vh;
+    }
+  }
+
+
   .input-pane {
     width: 100%;
     background: linear-gradient(90deg, rgb(0 0 0 / 1), rgb(0 0 0 / 1) 90%, rgb(34 34 34 / 1) 100%);
     textarea {
       width: 100%;
-      /* why do we need to remove 4 extra pixels? who knows */
-      height: calc(100vh - 54px);
+      height: 400px;
+
       resize: none;
       outline: none;
       border: none;
       padding: 0 5px;
       background: transparent;
+    }
+
+    @media (min-width: 1280px) {
+      textarea {
+        /* why do we need to remove 4 extra pixels? who knows */
+        height: calc(100vh - 54px);
+      }
     }
 
     .actions {
