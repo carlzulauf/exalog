@@ -37,12 +37,14 @@
       color: var(--examples-code-fg);
       padding: 3px 4px 3px 5px;
       border-radius: 4px;
+      overflow-x: scroll;
     }
 
     pre {
       background: var(--examples-code-bg);
       padding: 8px 15px 8px 15px;
       border-radius: 5px;
+      overflow-x: scroll;
     }
   }
 
