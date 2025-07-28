@@ -17,7 +17,7 @@
     <% @entries.each do |entry| %>
       <div class="entry">
         <div class="example"><code><%= entry.example %></code></div>
-        <div class="description"><%= entry.description.html_safe %></div>
+        <div class="description"><%= entry.description_html %></div>
       </div>
     <% end %>
   </div>

@@ -1,8 +1,8 @@
 ---
 - example: "[abc]"
-  description: 'A single character of: <code>a</code>, <code>b</code>, or <code>c</code>'
+  description: 'A single character of: `a`, `b`, or `c`'
 - example: "[^abc]"
-  description: 'Any single character except: <code>a</code>, <code>b</code>, or <code>c</code>'
+  description: 'Any single character except: `a`, `b`, or `c`'
 - example: "[a-z]"
   description: Any single character in the range a-z
 - example: "[a-zA-Z]"
@@ -34,26 +34,26 @@
 - example: "(...)"
   description: Capture everything enclosed
 - example: "(?<n>...)"
-  description: Named-capture of everything enclosed, named <code>n</code>
+  description: Named-capture of everything enclosed, named `n`
 - example: "(?:...)"
   description: Non-capture group
 - example: "(a\\|b)"
-  description: "<code>a</code> or <code>b</code>"
+  description: "`a` or `b`"
 - example: a?
-  description: Zero or one of <code>a</code>
+  description: Zero or one of `a`
 - example: a*
-  description: Zero or more of <code>a</code>
+  description: Zero or more of `a`
 - example: a*?
-  description: Zero or more of <code>a</code>, lazily (shortest possible)
+  description: Zero or more of `a`, lazily (shortest possible)
 - example: a+
-  description: One or more of <code>a</code>
+  description: One or more of `a`
 - example: a+?
-  description: One or more of <code>a</code>, lazily
+  description: One or more of `a`, lazily
 - example: a{3}
-  description: Exactly 3 of <code>a</code>
+  description: Exactly 3 of `a`
 - example: a{3,}
-  description: 3 or more of <code>a</code>
+  description: 3 or more of `a`
 - example: a{3,}?
-  description: 3 or more of <code>a</code>, lazily
+  description: 3 or more of `a`, lazily
 - example: a{3,6}
-  description: Between 3 and 6 of <code>a</code>
+  description: Between 3 and 6 of `a`

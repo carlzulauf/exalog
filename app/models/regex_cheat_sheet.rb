@@ -1,5 +1,9 @@
 class RegexCheatSheet < OptStruct.new
-  class Entry < OptStruct.new(:example, :description); end
+  class Entry < OptStruct.new(:example, :description)
+    def description_html
+      Kramdown::Document.new(description, input: 'GFM').to_html.html_safe
+    end
+  end
 
   def self.entries(**)
     new(**).entries
