@@ -26,6 +26,13 @@
     font-size: 0.9em;
   }
 
+  textarea {
+    background: var(--page-bg);
+    color: var(--page-fg);
+    font-family: "Ubuntu Sans Mono", monospace;
+    font-size: 0.75em;
+  }
+
   /* @media (min-width: 900px) {
     article {
       max-width: 900px;

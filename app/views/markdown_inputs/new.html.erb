@@ -1,0 +1,20 @@
+<% content_for(:title) { "syntax highlighting" } %>
+
+<div class="gfm-editor">
+  <div class="divided-panes">
+    <div class="input-pane">
+      <%= form_for(@markdown_input) do |f| %>
+        <div class="actions">
+          <%= link_to root_path do %>
+            <%= inline_svg "home" %>
+          <% end %>
+          <%= f.button "preview" %>
+        </div>
+        <%= f.text_area :body %>
+      <% end %>
+    </div>
+    <div class="output-pane">
+      <%= render partial: "output" %>
+    </div>
+  </div>
+</div>

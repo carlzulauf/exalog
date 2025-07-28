@@ -1,0 +1,5 @@
+<%= turbo_frame_tag "markdown_output" do %>
+  <article class="examples" data-controller="highlight-sources">
+    <%= @markdown_input.output.html_safe %>
+  </article>
+<% end %>

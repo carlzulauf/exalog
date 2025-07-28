@@ -9,4 +9,4 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
-@layer reset, themes, layout, highlight, cheats, pages;
+@layer reset, themes, layout, highlight, cheats, pages, gfm;
