@@ -33,8 +33,8 @@
       flex-direction: row;
       width: 100%;
       text-align: center;
-      font-size: 2.5em;
-      padding: 10px 0;
+      font-size: 1.25em;
+      padding: 10px 10px;
       border-bottom: 2px solid;
       border-color: var(--page-fg);
       margin-bottom: 0.5em;
@@ -42,8 +42,11 @@
       align-items: center;
 
       .home-links, .nav-links {
-        padding: 0 0.5em;
-        svg { fill: var(--page-bg); }
+        svg {
+          width: 24px;
+          height: 24px;
+          fill: var(--page-bg);
+        }
       }
 
       &:hover {
@@ -55,6 +58,33 @@
         }
       }
     }
+
+    @media (min-width: 900px) {
+      .header {
+        font-size: 2em;
+
+        .home-links, .nav-links {
+          svg {
+            width: 36px;
+            height: 36px;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .header {
+        font-size: 2.5em;
+
+        .home-links, .nav-links {
+          svg {
+            width: 48px;
+            height: 48px;
+          }
+        }
+      }
+    }
+
     .cheats {
       column-width: 26em;
       padding: 0 0.75em;
