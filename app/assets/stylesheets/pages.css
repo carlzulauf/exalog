@@ -3,7 +3,7 @@
 @layer pages {
   ul.page-list {
     list-style: none;
-    max-width: 32em;
+    max-width: 38.5rem;
     display: flex;
     flex-direction: column;
     margin: 0 auto; /* center the list */
@@ -13,12 +13,12 @@
       flex-direction: column;
       display: flex;
       text-decoration: none;
-      border: 2px solid;
+      border: 0.15rem solid;
       border-color: var(--page-link-border);
-      border-radius: 0.75em;
+      border-radius: 1rem;
       background: var(--page-link-bg);
-      padding: 1em;
-      margin: 0 0 1.25em 0;
+      padding: 1.2rem;
+      margin: 0 0 1.5rem 0;
 
       &:hover {
         background: var(--page-link-bg-hover);
@@ -39,7 +39,7 @@
 
       small {
         color: var(--page-link-desc-fg);
-        font-size: 0.9em;
+        font-size: 1.075rem;
       }
     }
   }

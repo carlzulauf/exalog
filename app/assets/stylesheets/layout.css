@@ -8,7 +8,7 @@
     font-family: "Ubuntu Sans", sans-serif;
     background: var(--page-bg);
     color: var(--page-fg);
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 
 
@@ -18,20 +18,24 @@
     margin: 0 auto;
 
     h1 {
-      font-size: 2em;
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
     }
   }
 
   code, pre {
     font-family: "Ubuntu Sans Mono", monospace;
-    font-size: 0.9em;
+    font-size: 1.075rem;
   }
 
   textarea {
     background: var(--page-bg);
     color: var(--page-fg);
     font-family: "Ubuntu Sans Mono", monospace;
-    font-size: 0.75em;
+    font-size: 0.9rem;
   }
 
   /* @media (min-width: 900px) {
@@ -46,10 +50,10 @@
     background: var(--primary-nav-bg);
     display: flex;
     flex-direction: row;
-    padding: 5px 20px 20px 20px;
+    padding: 0.35rem 1.25rem 1.25rem 1.25rem;
     align-items: center;
     justify-content: space-between;
-    margin: 0 0 2em 0;
+    margin: 0 0 2.4rem 0;
 
     .nav-heading {
       /* flex-grow: 1; */
@@ -57,7 +61,7 @@
       flex-direction: column;
 
       .nav-title {
-        font-size: 2.5em;
+        font-size: 3rem;
         a {
           text-decoration: none;
           color: var(--primary-nav-title-fg);
@@ -68,7 +72,7 @@
       }
       .nav-subheading {
         color: var(--primary-nav-subheading-fg);
-        font-size: 0.9em;
+        font-size: 1.05rem;
       }
     }
   }
