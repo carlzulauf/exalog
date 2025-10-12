@@ -10,5 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 0) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_11_203935) do
+  create_table "regex_sessions", force: :cascade do |t|
+    t.string "slug"
+    t.text "pattern"
+    t.text "haystack"
+    t.boolean "lines"
+    t.boolean "insensitive"
+    t.boolean "extended"
+    t.boolean "multiline"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_regex_sessions_on_slug"
+  end
 end

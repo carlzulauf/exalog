@@ -5,7 +5,11 @@ class CreateRegexSessions < ActiveRecord::Migration[8.0]
       t.text :pattern
       t.text :haystack
       t.boolean :lines
-      t.string :flags, array: true
+
+      # regex mode flags
+      t.boolean :insensitive
+      t.boolean :extended
+      t.boolean :multiline
 
       t.timestamps
     end
