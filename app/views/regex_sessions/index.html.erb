@@ -3,26 +3,28 @@
 <div class="regex-title">
   Regular Expression Playground
 </div>
-<div class="regex-workspace" data-controller="resizable-panes">
-  <div class="columns-container">
-    <div class="regex-column left-column">
-      <div class="regex-pane pattern-pane">
-        pattern goes here
+<%= form_with(model: @regex_session) do |f| %>
+  <div class="regex-workspace" data-controller="resizable-panes">
+    <div class="columns-container">
+      <div class="regex-column left-column">
+        <div class="regex-pane pattern-pane">
+          <%= f.textarea :pattern, placeholder: 'Regular expression pattern (no slashes needed)' %>
+        </div>
+        <div class="horizontal-gutter"></div>
+        <div class="regex-pane match-pane">
+          match data goes here
+        </div>
       </div>
-      <div class="horizontal-gutter"></div>
-      <div class="regex-pane match-pane">
-        match data goes here
-      </div>
-    </div>
-    <div class="vertical-gutter"></div>
-    <div class="regex-column right-column">
-      <div class="regex-pane input-data-pane">
-        Input text to match against goes here
-      </div>
-      <div class="horizontal-gutter"></div>
-      <div class="regex-pane results-pane">
-        match results go here
+      <div class="vertical-gutter"></div>
+      <div class="regex-column right-column">
+        <div class="regex-pane input-data-pane">
+          <%= f.textarea :haystack, placeholder: 'Test data to match against' %>
+        </div>
+        <div class="horizontal-gutter"></div>
+        <div class="regex-pane results-pane">
+          match results go here
+        </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>
