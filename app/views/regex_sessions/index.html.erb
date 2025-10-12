@@ -3,7 +3,7 @@
 <div class="regex-title">
   Regular Expression Playground
 </div>
-<%= form_with(model: @regex_session) do |f| %>
+<%= form_with(model: @regex_session, data: { controller: 'regex-form' }) do |f| %>
   <div class="regex-workspace" data-controller="resizable-panes">
     <div class="columns-container">
       <div class="regex-column left-column">
