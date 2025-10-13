@@ -22,8 +22,7 @@ export default class extends Controller {
     this.timer = setTimeout(() => {
       this.timer = null
       this.lastChange = null
-      // this.element.submit()
-      console.log("this is where we'd submit")
+      this.element.requestSubmit();
     }, 300) // ms
   }
 }

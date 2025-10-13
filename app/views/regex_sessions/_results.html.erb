@@ -1,0 +1,11 @@
+<%= turbo_frame_tag "regex_results_frame" do %>
+  <% if @regex_session.match? %>
+    <pre><%= @regex_session.matches.inspect %></pre>
+  <% else %>
+    <% if @regex_session.valid? %>
+      <p class="regex-empty">No results</p>
+    <% else %>
+      <p class="regex-placeholder"><em>Match results</em></p>
+    <% end %>
+  <% end %>
+<% end %>

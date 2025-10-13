@@ -1,0 +1,6 @@
+<%= turbo_stream.replace "regex_match_frame" do %>
+  <%= render partial: "match" %>
+<% end %>
+<%= turbo_stream.replace "regex_results_frame" do %>
+  <%= render partial: "results" %>
+<% end %>

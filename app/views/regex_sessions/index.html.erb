@@ -1,9 +1,11 @@
 <% content_for(:title) { "regular expressions" } %>
 
-<div class="regex-title">
-  Regular Expression Playground
-</div>
-<%= form_with(model: @regex_session, data: { controller: 'regex-form' }) do |f| %>
+<%= form_for(@regex_session, data: { controller: 'regex-form', turbo: true }) do |f| %>
+  <div class="regex-nav">
+    <div class="regex-title">
+      Regular Expression Playground
+    </div>
+  </div>
   <div class="regex-workspace" data-controller="resizable-panes">
     <div class="columns-container">
       <div class="regex-column left-column">
@@ -12,7 +14,7 @@
         </div>
         <div class="horizontal-gutter"></div>
         <div class="regex-pane match-pane">
-          match data goes here
+          <%= render partial: "match" %>
         </div>
       </div>
       <div class="vertical-gutter"></div>
@@ -22,7 +24,7 @@
         </div>
         <div class="horizontal-gutter"></div>
         <div class="regex-pane results-pane">
-          match results go here
+          <%= render partial: "results" %>
         </div>
       </div>
     </div>
