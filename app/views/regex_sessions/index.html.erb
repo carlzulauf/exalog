@@ -3,12 +3,14 @@
 <%= form_for(@regex_session, data: { controller: 'regex-form', turbo: true }) do |f| %>
   <div class="regex-nav" data-controller="nav">
     <div class="regex-title">
-      <% if !regex_domain? %>
+      <% if regex_domain? %>
+        <%= link_to "Regular Expression Playground", root_path %>
+      <% else %>
         <%= link_to root_path do %>
           <%= inline_svg "home" %>
         <% end %>
+        <%= link_to "Regular Expression Playground", regex_sessions_path %>
       <% end %>
-      <%= link_to "Regular Expression Playground", regex_sessions_path %>
     </div>
     <div class="regex-toggles">
       <div class="regex-toggle">
