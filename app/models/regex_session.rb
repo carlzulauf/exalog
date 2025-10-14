@@ -54,7 +54,7 @@ class RegexSession < ApplicationRecord
   end
 
   def modes
-    String.new do |enabled|
+    String.new.tap do |enabled|
       MODES.each do |name, flag|
         enabled << flag if send(name)
       end

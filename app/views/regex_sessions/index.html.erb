@@ -10,6 +10,24 @@
       <% end %>
       <%= link_to "Regular Expression Playground", regex_sessions_path %>
     </div>
+    <div class="regex-toggles">
+      <div class="regex-toggle">
+        <%= f.checkbox :lines %>
+        <%= f.label :lines, "Line Mode" %>
+      </div>
+      <div class="regex-toggle">
+        <%= f.checkbox :insensitive %>
+        <%= f.label :insensitive, "[i]gnore case" %>
+      </div>
+      <div class="regex-toggle">
+        <%= f.checkbox :extended %>
+        <%= f.label :extended, "e[x]tended" %>
+      </div>
+      <div class="regex-toggle">
+        <%= f.checkbox :multiline %>
+        <%= f.label :multiline, "[m]ulti-line" %>
+      </div>
+    </div>
     <%= f.button(:savemode, value: "execute") do %>
       match
     <% end %>
