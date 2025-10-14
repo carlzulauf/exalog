@@ -1,8 +1,13 @@
 <% content_for(:title) { "regular expressions" } %>
 
 <%= form_for(@regex_session, data: { controller: 'regex-form', turbo: true }) do |f| %>
-  <div class="regex-nav">
+  <div class="regex-nav" data-controller="nav">
     <div class="regex-title">
+      <% if !regex_domain? %>
+        <%= link_to root_path do %>
+          <%= inline_svg "home" %>
+        <% end %>
+      <% end %>
       <%= link_to "Regular Expression Playground", regex_sessions_path %>
     </div>
     <%= f.button(:savemode, value: "execute") do %>
@@ -14,6 +19,9 @@
     <%= f.button(:savemode, value: "fork") do %>
       fork
     <% end %>
+    <a class="theme-toggle" title="Toggle dark/light theme" data-action="click->nav#toggleTheme">
+      <%= inline_svg "theme-toggle" %>
+    </a>
   </div>
   <div class="regex-workspace" data-controller="resizable-panes">
     <div class="columns-container">

@@ -37,7 +37,8 @@ export default class extends Controller {
     const height = this.resizeTarget.parentElement.offsetHeight
     const top = this.resizeTarget.previousElementSibling
     const btm = this.resizeTarget.nextElementSibling
-    top.style.height = `calc(${event.clientY}px - 2rem)`
-    btm.style.height = `calc(${(height - event.clientY)}px - 2rem)`
+    console.log(this.element, this.element.offsetTop)
+    top.style.height = `${event.clientY - this.element.offsetTop}px`
+    btm.style.height = `${(height - event.clientY - this.element.offsetTop)}px`
   }
 }

@@ -2,17 +2,39 @@
   .regex-nav {
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 100%;
 
     .regex-title {
       height: 2rem;
-      padding-left: 1rem;
       flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+      a {
+        margin: 0 0.25rem;
+        text-decoration: none;
+        color: var(--page-fg);
+      }
+    }
+    button {
+      color: var(--page-link-title-fg);
+      background: var(--page-link-bg);
+      border: 0;
+      margin: 0 0.1rem;
+      padding: 0 0.5rem;
+      cursor: pointer;
+      &:hover {
+        color: var(--page-link-title-fg-hover);
+        background-color: var(--page-link-bg-hover);
+      }
+    }
+    .theme-toggle {
+      margin: 0 0.5rem;
     }
   }
 
   .regex-workspace {
-    background-color: #222;
+    background-color: var(--page-bg);
     width: 100vw;
     height: calc(100vh - 2rem);
   }
@@ -23,8 +45,8 @@
     height: 100%;
 
     .vertical-gutter {
-      background-color: white;
-      width: 1px;
+      background-color: var(--page-hl);
+      width: 0.125rem;
       height: 100%;
       cursor: ew-resize;
 
@@ -34,8 +56,8 @@
         display: block;
         position: relative;
         height: 100%;
-        width: 8px;
-        left: -3px;
+        width: 0.5rem;
+        left: -0.2rem;
         z-index: 10;
       }
     }
@@ -44,12 +66,12 @@
   .regex-column {
     display: flex;
     flex-direction: column;
-    width: calc(50% - 0.5px);
+    width: calc(50% - 0.0625rem);
     height: 100%;
 
     .horizontal-gutter {
-      background-color: white;
-      height: 1px;
+      background-color: var(--page-hl);
+      height: 0.125rem;
       width: 100%;
       cursor: ns-resize;
 
@@ -58,15 +80,15 @@
         content: "";
         display: block;
         position: relative;
-        height: 8px;
+        height: 0.5rem;
         width: 100%;
-        top: -2px;
+        top: -0.125rem;
         z-index: 10;
       }
     }
 
     .regex-pane {
-      height: calc(50% - 0.5px);
+      height: calc(50% - 0.0625rem);
       width: 100%;
     }
   }
@@ -86,7 +108,8 @@
   }
 
   .regex-match {
-    background-color: green;
+    background-color: var(--match-bg);
+    color: var(--match-fg)
   }
 
   .match-pane, .results-pane {
@@ -103,7 +126,9 @@
       font-family: "Ubuntu Sans Mono", monospace;
       text-align: center;
       code {
-        background: black;
+        color: var(--page-fg);
+        background: var(--page-ll);
+        padding: 0 0.25rem;
       }
     }
 

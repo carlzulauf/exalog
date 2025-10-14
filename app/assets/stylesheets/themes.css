@@ -3,7 +3,11 @@
 @layer themes {
   body.dark-theme {
     --page-bg: #000;
+    --page-ll: #222;
     --page-fg: #c8c8c8;
+    --page-hl: #fff;
+    --match-fg: var(--page-fg);
+    --match-bg: #005c00;
     --primary-nav-bg: linear-gradient(178deg, rgb(34 34 34 / 1), rgb(34 34 34 / 1) 40%, rgb(34 34 34 / 0) 100%);
     --primary-nav-title-fg: var(--page-fg);
     --primary-nav-title-fg-hover: #fff;
@@ -23,7 +27,11 @@
   /* LIGHT THEME */
   body.light-theme {
     --page-bg: #fff;
-    --page-fg: #333333;
+    --page-ll: #ccc;
+    --page-fg: #333;
+    --page-hl: #000;
+    --match-fg: var(--page-fg);
+    --match-bg: #99dd99;
     --primary-nav-bg: linear-gradient(178deg, rgba(220 220 220 / 1), rgb(220 220 220 / 1) 30%, rgb(220 220 220 / 0) 90%, rgb(220 220 220 / 0) 100%);
     --primary-nav-title-fg: var(--page-fg);
     --primary-nav-title-fg-hover: #001400;
