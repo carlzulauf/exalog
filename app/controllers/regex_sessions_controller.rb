@@ -4,7 +4,7 @@ class RegexSessionsController < ApplicationController
   end
 
   def show
-    @regex_session = RegexSession.find(params[:id])
+    @regex_session = RegexSession.find_by!(slug: params[:id])
     render :index
   end
 
@@ -22,13 +22,17 @@ class RegexSessionsController < ApplicationController
   end
 
   def update
-    @regex_session = RegexSession.find(params[:id])
+    @regex_session = RegexSession.find_by!(slug: params[:id])
     @regex_session.assign_attributes(regex_session_params)
-    @regex_session.execute
+    executed = @regex_session.execute
 
-    respond_to do |format|
-      format.turbo_stream { render :create }
-      format.html { render :index }
+    if executed == @regex_session
+      respond_to do |format|
+        format.turbo_stream { render :create }
+        format.html { render :index }
+      end
+    else
+      redirect_to regex_session_url(executed)
     end
   end
 

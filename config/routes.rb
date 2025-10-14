@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :pages, only: %i[show]
   resources :regexes, only: %i[show]
-  resources :regex_sessions, only: %i[index show create update destroy]
+  resources :regex_sessions, only: %i[index show create update destroy], path: 'r'
   # Defines the root path route ("/")
   # root "posts#index"
   root "pages#index"

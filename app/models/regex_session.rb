@@ -16,7 +16,11 @@ class RegexSession < ApplicationRecord
   end
 
   def execute
-    save! if savemode == "save"
+    case savemode
+    when "save" then save!
+    when "fork"
+      return self.class.create!(attributes.except("id", "slug", "created_at"))
+    end
     self
   end
 
@@ -68,6 +72,10 @@ class RegexSession < ApplicationRecord
       return candidate
     end
     errors.add(:slug, "Unable to generate unused slug")
+    slug
+  end
+
+  def to_param
     slug
   end
 end
