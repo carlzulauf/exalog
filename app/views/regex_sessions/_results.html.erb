@@ -1,6 +1,14 @@
 <%= turbo_frame_tag "regex_results_frame" do %>
   <% if @regex_session.match? %>
-    <pre><%= @regex_session.matches.inspect %></pre>
+    <ol class="regex-results-list">
+      <% @regex_session.matches.each do |match| %>
+        <li>
+          <span class="regex-context"><%= match.before_inline(30) %></span>
+          <span class="regex-match"><%= match.to_s %></span>
+          <span class="regex-context"><%= match.after_inline(30) %></span>
+        </li>
+      <% end %>
+    </ol>
   <% else %>
     <% if @regex_session.valid? %>
       <p class="regex-empty">No results</p>

@@ -1,6 +1,11 @@
 <%= turbo_frame_tag "regex_match_frame" do %>
   <% if @regex_session.match? %>
-    <pre><%= @regex_session.current_match.inspect %></pre>
+    <dl>
+      <% @regex_session.current_match.all_captures.each do |key, value| %>
+        <dt><code><%= key %></code></dt>
+        <dd><span class="regex-match"><%= value %></span></dd>
+      <% end %>
+    </dl>
   <% else %>
     <% if @regex_session.valid? %>
       <p class="regex-empty">No match</p>

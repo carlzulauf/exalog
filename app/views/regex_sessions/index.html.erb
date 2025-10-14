@@ -5,6 +5,12 @@
     <div class="regex-title">
       Regular Expression Playground
     </div>
+    <%= f.button(:savemode, value: "execute") do %>
+      match
+    <% end %>
+    <%= f.button(:savemode, value: "save") do %>
+      save
+    <% end %>
   </div>
   <div class="regex-workspace" data-controller="resizable-panes">
     <div class="columns-container">
