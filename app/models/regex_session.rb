@@ -48,6 +48,9 @@ class RegexSession < ApplicationRecord
         end
       end
     end
+  rescue RegexpError => e
+    Rails.logger.warn "RegexpError: #{e.inspect}"
+    []
   end
 
   def modes
