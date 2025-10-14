@@ -122,6 +122,7 @@
 
   .match-pane, .results-pane {
     padding: 1rem 1rem;
+    overflow: scroll;
   }
 
   .match-pane {
