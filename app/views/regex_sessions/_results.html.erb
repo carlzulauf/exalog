@@ -2,12 +2,15 @@
   <% if @regex_session.match? %>
     <ol class="regex-results-list">
       <% @regex_session.matches.each_with_index do |match, i| %>
-        <li data-action="click->regex-form#selectResult" data-result-index="<%= i %>">
+        <%= tag.li(
+              class: { selected: i == @regex_session.result_index },
+              data: { action: "click->regex-form#selectResult", result_index: i }
+            ) do %>
           <span
             class="regex-context"><%= match.before_inline(30) %></span><span
             class="regex-match"><%= match.to_s %></span><span
             class="regex-context"><%= match.after_inline(30) %></span>
-        </li>
+        <% end %>
       <% end %>
     </ol>
   <% else %>

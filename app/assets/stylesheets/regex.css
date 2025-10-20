@@ -138,7 +138,7 @@
       li {
         cursor: pointer;
 
-        &:hover {
+        &:hover, &.selected {
           background-color: var(--page-ll);
         }
       }
