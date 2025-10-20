@@ -9,7 +9,8 @@ class RegexSession < ApplicationRecord
 
   before_save :generate_slug
 
-  attr_accessor :savemode
+  attr_accessor :savemode, :result_index
+  attr_writer :result_index
 
   def match?
     matches.any?
@@ -61,8 +62,17 @@ class RegexSession < ApplicationRecord
     end
   end
 
+  def result_index
+    return 0 if !defined?(@result_index) || @result_index.blank?
+
+    @result_index.to_i
+  end
+
   def current_match
-    matches.first
+    return matches.first if result_index < 0
+    return matches.last if result_index >= matches.count
+
+    matches[result_index]
   end
 
   def generate_slug(force: false)

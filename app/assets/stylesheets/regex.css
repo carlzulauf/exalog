@@ -133,6 +133,18 @@
     overflow: scroll;
   }
 
+  .results-pane {
+    ol.regex-results-list {
+      li {
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--page-ll);
+        }
+      }
+    }
+  }
+
   .match-pane {
     dl {
       display: grid;

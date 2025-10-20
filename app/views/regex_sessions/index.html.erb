@@ -1,6 +1,7 @@
 <% content_for(:title) { "regular expressions" } %>
 
 <%= form_for(@regex_session, data: { controller: 'regex-form', turbo: true }) do |f| %>
+  <%= f.hidden_field :result_index, data: {'regex-form-target': 'resultIndex'} %>
   <div class="regex-nav" data-controller="nav">
     <div class="regex-title">
       <% if regex_domain? %>

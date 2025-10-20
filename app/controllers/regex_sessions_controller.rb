@@ -41,7 +41,7 @@ class RegexSessionsController < ApplicationController
   def regex_session_params
     params.require(:regex_session).permit(
       :pattern, :haystack,
-      :lines, :savemode,
+      :lines, :savemode, :result_index,
       :insensitive, :extended, :multiline
     )
   end
