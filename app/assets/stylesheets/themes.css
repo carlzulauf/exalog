@@ -7,7 +7,7 @@
     --page-fg: #c8c8c8;
     --page-hl: #fff;
     --match-fg: var(--page-fg);
-    --match-bg: #005c00;
+    --match-bg: #005c00a0;
     --primary-nav-bg: linear-gradient(178deg, rgb(34 34 34 / 1), rgb(34 34 34 / 1) 40%, rgb(34 34 34 / 0) 100%);
     --primary-nav-title-fg: var(--page-fg);
     --primary-nav-title-fg-hover: #fff;
