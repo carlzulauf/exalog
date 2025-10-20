@@ -19,15 +19,21 @@
       </div>
       <div class="regex-toggle">
         <%= f.checkbox :insensitive %>
-        <%= f.label :insensitive, "[i]gnore case" %>
+        <%= f.label :insensitive do %>
+          <span class="flag-letter">i</span>gnore case
+        <% end %>
       </div>
       <div class="regex-toggle">
         <%= f.checkbox :extended %>
-        <%= f.label :extended, "e[x]tended" %>
+        <%= f.label :extended do %>
+          e<span class="flag-letter">x</span>tended
+        <% end %>
       </div>
       <div class="regex-toggle">
         <%= f.checkbox :multiline %>
-        <%= f.label :multiline, "[m]ulti-line" %>
+        <%= f.label :multiline do %>
+          <span class="flag-letter">m</span>ulti-line
+        <% end %>
       </div>
     </div>
     <%= f.button(:savemode, value: "execute") do %>
